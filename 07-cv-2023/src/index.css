@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.maquina {
+  font-family: monospace;
+  white-space: nowrap;
+  width: 22ch;
+  animation: typing 5s steps(22) infinite;
+  overflow: hidden;
+}
+
+.img{
+  background-image: url(./assets/gym.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -490px;
+}
+.img01{
+  background-image: url(./assets/lobo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -490px;
+}
+.img02{
+  background-image: url(./assets/game.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -300px;
+}
+.img03{
+  background-image: url(./assets/bar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+@media (max-width:493px) {
+  .img{
+    background-position: 0 -200px;
+  }
+
+  .img01{
+    background-position: 0 -300px;
+  }
+}
+
+@media (min-width:640px) {
+  .img{
+    background-position: 0 -200px;
+  }
+
+  .img01{
+    background-position: 0 -200px;
+  }
+
+  .img02{
+    background-position: 0 -100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .img01{
+    background-position: 0 -450px;
+  }
+}
+
+@media (min-width:1280px) {
+  .img{
+    background-position: 0 -500px;
+  }
+
+  .img01{
+    background-position: 0 -600px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+
+@layer base {
+  .ocultar {
+    @apply -translate-y-full transition-all ease-in opacity-0;
+  }
+
+  .mostrar {
+    @apply -translate-y-7 transition-all ease-out opacity-100 duration-1000 lg:translate-y-20;
+  }
+
+  .aboutme {
+    @apply text-white font-semibold pt-2 text-sm;
+  }
+}
+
+@layer components {
+  body {
+    @apply bg-gradient-to-r bg-slate-500 to-slate-700;
+    background-image: url('../src/assets/fondo.jpg');
+    background-size: cover;
+  }
+
+  img {
+    @apply w-full h-auto
+  }
+
+}
